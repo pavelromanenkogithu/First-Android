@@ -1,0 +1,32 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+ruby '>= 3.2.0', '< 3.5.0'
+
+# Core framework
+gem 'rails', '~> 8.0'
+
+# Web server
+gem 'puma', '~> 7.0'
+
+# Database (SQLite for simplicity)
+gem 'sqlite3', '~> 1.5'
+
+# Authentication
+gem 'devise'
+
+# Useful development tools
+gem 'dotenv', '~> 3.0'       # environment variables
+gem 'haml-rails', '~> 3.0'   # if you like HAML
+gem 'pry', require: false     # interactive console
+
+# Testing
+group :development, :test do
+  gem 'rspec-rails', '~> 8.0'
+  gem 'faker'                 # test data generation
+end
+
+# Debugging
+group :development do
+  gem 'better_errors', '~> 2.9'
+end
